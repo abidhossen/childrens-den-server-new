@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const postController = require('../posts/posts.controller');
 const categoriesController = require('../categories/categories.controller');
-const classesController = require('../classes/classes.controller');
 // const {isAuthenticated} = require('../user/user.controller');
 // const userController = require('../user/user.controller');
 // const postMiddleware = require('../posts/posts.middleware');
@@ -17,8 +16,5 @@ router.put('/posts/:id', postController.updatePostById);
 router.delete('/posts/:id', postController.deletePostById);
 
 router.post('/categories', categoriesController.createCategory);
-router.get('/classes', classesController.getClasses);
-router.post('/classes', classesController.createClasses);
-router.delete('/class/:id', classesController.deleteClassById);
 
 module.exports = router;
